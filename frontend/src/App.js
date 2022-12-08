@@ -1,3 +1,4 @@
+
 import './App.css';
 import Navbar from "./components/Navbar"
 import posts from './data/example-data'
@@ -12,6 +13,7 @@ function App() {
       <AllPosts data={posts} />
     </div>
     
+
   );
 }
 

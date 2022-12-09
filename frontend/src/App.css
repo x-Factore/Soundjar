@@ -139,7 +139,7 @@ body{
   background-color: rgb(242, 235, 235);
 }
 
-.onepost-box{
+.onePost-box{
   background-color: rgb(239, 239, 239);
   color: white;
   box-shadow: 0px 3px 10px black;
@@ -152,7 +152,7 @@ body{
   margin-bottom: 10px;
 }
 
-.onepost-cover{
+.onePost-cover{
   top: 7%;
   right: 30%;
   max-width: 30%;
@@ -160,7 +160,7 @@ body{
   box-shadow: 1px 1px 8px rgb(55, 66, 57);
 }
 
-.onepost-box h1{
+.onePost-box h1{
   position: relative;
   bottom: 60%;
   left: 15%;
@@ -168,7 +168,7 @@ body{
   font-size: 4.5rem;
 }
 
-.onepost-box h2{
+.onePost-box h2{
   position: relative;
   bottom: 70%;
   left: 15%;
@@ -176,7 +176,7 @@ body{
   font-size: 3rem;
 }
 
-.onepost-box h3{
+.onePost-box h3{
   position: relative;
   bottom: 70%;
   left: 30%;
@@ -184,7 +184,7 @@ body{
   font-size: 2rem;
 }
 
-.onepost-box p{
+.onePost-box p{
   position: relative;
   bottom: 70%;
   left: 15%;
@@ -192,7 +192,7 @@ body{
   font-size: 2rem;
 }
 
-.onepost-box a{
+.onePost-box a{
   border-radius: 3%;
   position: relative;
   bottom: 60%;
@@ -203,11 +203,11 @@ body{
   height: 60px;
 }
 
-.onepost-box a:hover{
+.onePost-box a:hover{
   background-color: #777;
 }
 
-.onepost-box button{
+.onePost-box button{
   position: relative;
   bottom: 70%;
   left: 20%;

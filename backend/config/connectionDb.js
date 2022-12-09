@@ -1,19 +1,13 @@
-//load env variables
-if (process.env.NODE_ENV != "production") {
+const mongoose = require("mongoose");
 
-    require("dotenv").config();
-  }
-  const mongoose = require("mongoose");
+mongoose.set('strictQuery', true);
   
-  async function connectedDb() {
-    try{
-  
-       await mongoose.connect(process.env.DB_URL);
-       console.log('connected to database');
-    } catch(error){
-     console.log(error );
-    }
-  }
+        mongoose.connect('mongodb://localhost:27017/Auth')
+       .then(()=>console.log('connected to database'))
+     .catch((error)=>
+     console.log(error ))
+    
+  const connectedDb= mongoose.connection
   
   module.exports = connectedDb;
   

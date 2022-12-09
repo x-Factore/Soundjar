@@ -1,8 +1,10 @@
+import React from "react";
+
 const OnePost = (props) => {
     console.log(props.data)
     return (
-        <div className='onepost-box'>
-            <img src={props.data.cover} className="onepost-cover"></img>
+        <div className='onePost-box'>
+            <img src={props.data.cover} className="onePost-cover"></img>
             <h1>{props.data.title}</h1>
             <h2>{props.data.artist}</h2>
             <p>0 Upvotes</p>

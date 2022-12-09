@@ -25,16 +25,11 @@ const fetchPost = async (req, res) => {
 };
 
 const createPost = async (req, res) => {
-  // Get the sent in data off request body
-
-  const { title, body } = req.body;
-
+ 
+ 
   // Create a post with it
 
-  const post = await Post.create({
-    title,
-    body,
-  });
+  const post = await Post.create(req.body);
 
   // Respond with the new post
 

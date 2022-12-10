@@ -13,26 +13,10 @@ import Register from "./components/Register";
 function App() {
   // console.log("iiiiiiiiiiiiiiiiiiiiii",posts);
 
-  const [connected, setConnected] = useState(false);
-  const checkToken = () => {
-    if (typeof window !== "undefined") {
-      const user = JSON.parse(localStorage.getItem("token"));
-      if (user) {
-        setConnected(true);
-      } else {
-        setConnected(false);
-      }
-    }
-  };
-  useEffect(() => {
-    checkToken();
-  }, [connected]);
-  const logout = () => {
-    localStorage.clear();
-  };
+  
   return (
     <div className="App">
-      <Navbar user={connected} logout={logout} />
+      <Navbar  />
       <Routes>
         <Route index element={<Login />} />
 
@@ -44,6 +28,6 @@ function App() {
       </Routes>
     </div>
   );
-}
 
+}
 export default App;

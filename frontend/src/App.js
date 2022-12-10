@@ -32,7 +32,7 @@ function App() {
   };
   return (
     <div className="App">
-      <Navbar  />
+      <Navbar user={connected} logout={logout} />
       <Routes>
         <Route index element={<Login />} />
 

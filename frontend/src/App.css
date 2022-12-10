@@ -217,3 +217,8 @@ body{
   width: 7%;
   height: 12%;
 }
+
+.form{
+  background:rgb(139, 143, 255);
+  background: linear-gradient(90deg, rgb(139, 143, 255) 40%, rgb(136, 78, 163) 100%);
+}

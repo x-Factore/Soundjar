@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 import React from "react";
 import ReactDOM from "react-dom/client";
 import App from "./App";
@@ -13,3 +14,14 @@ root.render(
     <App />
   </BrowserRouter>
 );
+=======
+
+import React from "react";
+import ReactDOM from "react-dom/client";
+import App from "./App";
+
+const root = ReactDOM.createRoot(document.getElementById("root"));
+root.render(<App />);
+
+
+>>>>>>> 741fbfb1e69e640802fd3e466634b0bc30a68c45

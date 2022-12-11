@@ -6,16 +6,16 @@ import AllPosts from "./components/AllPosts";
 import React, { useEffect, useState } from "react";
 import About from "./components/About";
 import Services from "./components/Services";
-import { Routes, Route } from "react-router-dom";
+import {BrowserRouter, Routes, Route } from "react-router-dom";
 import Login from "./components/Login";
 import Register from "./components/Register";
+import Contact from "./components/Contact";
 
 function App() {
-  console.log("iiiiiiiiiiiiiiiiiiiiii",posts);
-
+ 
   const [connected, setConnected] = useState(false);
   const checkToken = () => {
-    if (typeof window !== "undefined") {
+    if (typeof window != "undefined") {
       const user = JSON.parse(localStorage.getItem("token"));
       if (user) {
         setConnected(true);
@@ -31,18 +31,21 @@ function App() {
     localStorage.clear();
   };
   return (
-    <div className="App">
-      <Navbar user={connected} logout={logout} />
-      <Routes>
-        <Route index element={<Login />} />
+    <BrowserRouter>
+      <div className="App">
+        <Navbar user={connected} logout={logout} />
+        <Routes>
+          <Route index element={<Login />} />
 
-        <Route path="/" element={<Login />} />
-        <Route path="/home" element={<AllPosts />} />
-        <Route path="/about" element={<About />} />
-        <Route path="/service" element={<Services />} />
-        <Route path="/register" element={<Register />} />
-      </Routes>
-    </div>
+          <Route exact path="/home" element={<AllPosts />} />
+          <Route exact path="/login" element={<Login />} />
+          <Route exact path="/about" element={<About />} />
+          <Route exact path="/service" element={<Services />} />
+          <Route exact path="/register" element={<Register />} />
+          <Route exact path="/contact" element={<Contact />} />
+        </Routes>
+      </div>
+    </BrowserRouter>
   );
 }
 

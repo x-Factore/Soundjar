@@ -31,16 +31,13 @@ app.use(
   })
 );
 
-//connecting to database
-
-
 //Routing
 
 
 app.post("/signup", usersController.signup);
 app.post("/login", usersController.login);
 app.get("/logout", usersController.logout);
-// app.get("/check-auth", requireAuth, usersController.checkAuth);
+app.get("/check-auth", requireAuth, usersController.checkAuth);
 
 app.get("/posts", postController.fetchPosts);
 app.get("/posts/:id", postController.fetchPost);

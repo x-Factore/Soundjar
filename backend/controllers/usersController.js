@@ -41,7 +41,7 @@ async function login(req, res) {
     if (!user)
       return res
         .status(401)
-        .json({ message: "this user dosent exist in our database" });
+        .json({ message: "this user does'nt exist in our database" });
 
     //compare sent in password with found user password hash
 

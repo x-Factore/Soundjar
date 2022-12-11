@@ -1,5 +1,6 @@
 .App {
   text-align: center;
+  min-height: 500px;
 }
 
 .App-logo {
@@ -156,7 +157,7 @@ body{
   top: 7%;
   right: 30%;
   max-width: 30%;
-  position: relative;
+  position:absolute;
   box-shadow: 1px 1px 8px rgb(55, 66, 57);
 }
 
@@ -221,4 +222,15 @@ body{
 .form{
   background:rgb(139, 143, 255);
   background: linear-gradient(90deg, rgb(139, 143, 255) 40%, rgb(136, 78, 163) 100%);
+}
+
+.card{
+  transition: all 0.5s ease ; 
+  margin-top: 1cm;
+
+}
+
+.card:hover{
+  cursor: pointer;
+  box-shadow: 0 .5rem 1rem rgb(0, 0 , 0, .15);
 }

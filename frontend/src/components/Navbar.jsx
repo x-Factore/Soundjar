@@ -6,14 +6,14 @@ function Navbar({ user, logout }) {
   const logoutHandler = () => {
     logout();
     window.location.reload(false);
-    navigate("/");
+    navigate("/login");
   };
   return (
     <div>
-      <nav class="navbar navbar-expand-lg navbar-light shadow">
-        <div class="container">
+      <nav className="navbar navbar-expand-lg navbar-light shadow">
+        <div className="container">
           <button
-            class="navbar-toggler"
+            className="navbar-toggler"
             type="button"
             data-bs-toggle="collapse"
             data-bs-target="#navbarSupportedContent"
@@ -21,32 +21,41 @@ function Navbar({ user, logout }) {
             aria-expanded="false"
             aria-label="Toggle navigation"
           >
-            <span class="navbar-toggler-icon"></span>
+            <span className="navbar-toggler-icon"></span>
           </button>
-          <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-              <li class="nav-item">
-                <Link class="nav-link active" aria-current="page" to="/home">
+          <div className="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul className="navbar-nav me-auto mb-2 mb-lg-0">
+              <li className="nav-item">
+                <Link
+                  className="nav-link active"
+                  aria-current="page"
+                  to="/home"
+                >
                   Home
                 </Link>
               </li>
-              <li class="nav-item">
-                <Link class="nav-link" to="/about">
+              <li className="nav-item">
+                <Link className="nav-link" to="/about">
                   About
                 </Link>
               </li>
-              <li class="nav-item">
-                <Link class="nav-link" to="/service">
+              <li className="nav-item">
+                <Link className="nav-link" to="/service">
                   Services
                 </Link>
               </li>
+              <li className="nav-item">
+                <Link className="nav-link" to="/contact">
+                  Contact 
+                </Link>
+              </li>
             </ul>
-            <a class="navbar-brand fw-bolder fs-4 mx-auto">Soundjar</a>
+            <Link className="navbar-brand  fw-bolder fs-4 mx-auto" to ="/home">Soundjar</Link>
             {!user ? (
               <>
                 <Link
                   className="btn btn-outline-primary ms-auto px-4 rounded-pill"
-                  to="/"
+                  to="/login"
                 >
                   <i className="fa fa-sign-in ms-2 "></i> Login
                 </Link>
@@ -60,7 +69,6 @@ function Navbar({ user, logout }) {
             ) : (
               <Link
                 className="btn btn-outline-primary ms-2 px-4 rounded-pill"
-                to="/register"
                 onClick={logoutHandler}
               >
                 <i className="fa fa-sign-out"></i>

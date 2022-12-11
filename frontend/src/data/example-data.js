@@ -1,3 +1,5 @@
+// import AllPosts from "../components/AllPosts";
+
 var posts = [
     {
         title: 'Mockingbird',

@@ -16,11 +16,12 @@ function Register() {
       .post("http://localhost:5000/signup", form)
       .then((response) => {
         alert(response.data.message);
-        localStorage.setItem("token", JSON.stringify(response.data.message));
+        console.log(response);
         window.location.reload(false);
         navigate("/login");
       })
       .catch((err) => console.log(err));
+
   };
   return (
     <div>
